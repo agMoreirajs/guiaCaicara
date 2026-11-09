@@ -1,3 +1,3 @@
 export const LOGO = require('./images/logo.png');
-export const AVATAR = require('./perfil/avatar.jpg');
-export const PLACEHOLDER = require('./atracoes/placeholder.jpg');
+export const AVATAR = require('./perfil/avatar.png');
+export const PLACEHOLDER = require('./atracoes/placeholder.png');

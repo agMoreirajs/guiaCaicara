@@ -1,4 +1,4 @@
-import { Image, ScrollView, StyleSheet, Text, View } from 'react-native';
+import { Image, Linking, ScrollView, StyleSheet, Text, View } from 'react-native';
 import { Stack, useLocalSearchParams } from 'expo-router';
 import FavoriteButton from '@/src/components/FavoriteButton';
 import InfoBlock from '@/src/components/InfoBlock';
@@ -18,10 +18,20 @@ export default function AtracaoDetalheScreen() {
   }
 
   const { endereco } = atracao;
+
   const enderecoCompleto =
     `${endereco.rua}, ${endereco.numero}\n` +
     `${endereco.bairro}\n` +
     `${endereco.cidade} – ${endereco.estado}`;
+
+  const abrirNoMapa = () => {
+  const { coordenadas } = atracao;
+  const query = coordenadas
+    ? `${coordenadas.latitude},${coordenadas.longitude}`
+    : encodeURIComponent(`${atracao.nome}, ${endereco.cidade}, ${endereco.estado}, Brasil`);
+
+  Linking.openURL(`https://www.google.com/maps/search/?api=1&query=${query}`);
+};
 
   return (
     <>
@@ -39,7 +49,12 @@ export default function AtracaoDetalheScreen() {
 
           <Text style={styles.nome}>{atracao.nome}</Text>
 
-          <InfoBlock icon="location-outline" titulo="Endereço" texto={enderecoCompleto} />
+          <InfoBlock
+            icon="location-outline"
+            titulo="Endereço"
+            texto={enderecoCompleto}
+            onPress={abrirNoMapa}
+          />
           <InfoBlock icon="time-outline" titulo="Horário de funcionamento" texto={atracao.horarios} />
           <InfoBlock icon="book-outline" titulo="História e importância" texto={atracao.historia} />
         </View>

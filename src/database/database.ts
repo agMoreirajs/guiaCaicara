@@ -14,7 +14,7 @@ export const cidades: Cidade[] = [
     id: 'santos',
     nome: 'Santos',
     slogan: 'Porto, orla e história',
-    imagem: require('../assets/cidades/santos.jpg'),
+    imagem: require('../assets/cidades/santos.png'),
     atracoes: [
       {
         id: 'santos-aquario',
@@ -45,6 +45,7 @@ export const cidades: Cidade[] = [
         horarios: 'Aberta 24 horas',
         historia:
           'Uma das praias mais movimentadas da cidade, famosa pelo calçadão e pela vida esportiva.',
+        coordenadas: { latitude: -23.969759, longitude: -46.336023, },
       },
     ],
   },
@@ -52,7 +53,7 @@ export const cidades: Cidade[] = [
     id: 'sao-vicente',
     nome: 'São Vicente',
     slogan: 'Primeira vila do Brasil',
-    imagem: require('../assets/cidades/sao-vicente.jpg'),
+    imagem: require('../assets/cidades/sao-vicente.png'),
     atracoes: [
       {
         id: 'saovicente-porchat',
@@ -90,7 +91,7 @@ export const cidades: Cidade[] = [
     id: 'peruibe',
     nome: 'Peruíbe',
     slogan: 'Natureza e tranquilidade',
-    imagem: require('../assets/cidades/peruibe.jpg'),
+    imagem: require('../assets/cidades/peruibe.png'),
     atracoes: [
       {
         id: 'peruibe-guarau',
@@ -128,7 +129,7 @@ export const cidades: Cidade[] = [
     id: 'praia-grande',
     nome: 'Praia Grande',
     slogan: 'Sol, mar e lazer',
-    imagem: require('../assets/cidades/praia-grande.jpg'),
+    imagem: require('../assets/cidades/praia-grande.png'),
     atracoes: [
       {
         id: 'pgrande-orla',
@@ -166,7 +167,7 @@ export const cidades: Cidade[] = [
     id: 'mongagua',
     nome: 'Mongaguá',
     slogan: 'Mar e Mata Atlântica',
-    imagem: require('../assets/cidades/mongagua.jpg'),
+    imagem: require('../assets/cidades/mongagua.png'),
     atracoes: [
       {
         id: 'mongagua-praia-central',
@@ -204,7 +205,7 @@ export const cidades: Cidade[] = [
     id: 'itanhaem',
     nome: 'Itanhaém',
     slogan: 'Berço histórico do litoral sul',
-    imagem: require('../assets/cidades/itanhaem.jpg'),
+    imagem: require('../assets/cidades/itanhaem.png'),
     atracoes: [
       {
         id: 'itanhaem-matriz',
@@ -242,7 +243,7 @@ export const cidades: Cidade[] = [
     id: 'guaruja',
     nome: 'Guarujá',
     slogan: 'A pérola do litoral',
-    imagem: require('../assets/cidades/guaruja.jpg'),
+    imagem: require('../assets/cidades/guaruja.png'),
     atracoes: [
       {
         id: 'guaruja-enseada',
@@ -280,7 +281,7 @@ export const cidades: Cidade[] = [
     id: 'cubatao',
     nome: 'Cubatão',
     slogan: 'Serra, história e indústria',
-    imagem: require('../assets/cidades/cubatao.jpg'),
+    imagem: require('../assets/cidades/cubatao.png'),
     atracoes: [
       {
         id: 'cubatao-caminho-do-mar',
@@ -318,7 +319,7 @@ export const cidades: Cidade[] = [
     id: 'bertioga',
     nome: 'Bertioga',
     slogan: 'Entre o mar e a Mata Atlântica',
-    imagem: require('../assets/cidades/bertioga.jpg'),
+    imagem: require('../assets/cidades/bertioga.png'),
     atracoes: [
       {
         id: 'bertioga-forte-sao-joao',

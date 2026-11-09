@@ -16,6 +16,7 @@ export type Atracao = {
   endereco: Endereco;
   horarios: string;
   historia: string;
+  coordenadas?: { latitude: number; longitude: number };
 };
 
 export type AtracaoComCidade = Atracao & {
