@@ -2,6 +2,7 @@ import { PLACEHOLDER } from '@/src/assets';
 import { IMAGENS_ATRACOES } from '@/src/assets/atracoes';
 import type { AtracaoComCidade, Cidade, Endereco } from '@/src/types';
 
+
 const endereco = (
   rua: string,
   numero: string,
@@ -10,6 +11,7 @@ const endereco = (
 ): Endereco => ({ rua, numero, bairro, cidade, estado: 'SP' });
 
 export const cidades: Cidade[] = [
+  // Santos
   {
     id: 'santos',
     nome: 'Santos',
@@ -20,7 +22,7 @@ export const cidades: Cidade[] = [
         id: 'santos-aquario',
         nome: 'Aquário Municipal de Santos',
         categoria: 'Cultura e Natureza',
-        imagem: PLACEHOLDER,
+        imagem: IMAGENS_ATRACOES['santos-aquario'],
         endereco: endereco('Av. Bartolomeu de Gusmão', 'S/N', 'Ponta da Praia', 'Santos'),
         horarios: 'Terça a domingo, 9h às 17h (confirmar antes da visita)',
         historia:
@@ -30,7 +32,7 @@ export const cidades: Cidade[] = [
         id: 'santos-museu-cafe',
         nome: 'Museu do Café',
         categoria: 'História e Patrimônio',
-        imagem: PLACEHOLDER,
+        imagem: IMAGENS_ATRACOES['santos-museu-cafe'],
         endereco: endereco('Rua 15 de Novembro', '95', 'Centro', 'Santos'),
         horarios: 'Terça a domingo, 10h às 17h (confirmar)',
         historia:
@@ -40,7 +42,7 @@ export const cidades: Cidade[] = [
         id: 'santos-gonzaga',
         nome: 'Praia do Gonzaga',
         categoria: 'Praia',
-        imagem: PLACEHOLDER,
+        imagem: IMAGENS_ATRACOES['santos-gonzaga'],
         endereco: endereco('Av. Ana Costa', 'S/N', 'Gonzaga', 'Santos'),
         horarios: 'Aberta 24 horas',
         historia:
@@ -49,6 +51,8 @@ export const cidades: Cidade[] = [
       },
     ],
   },
+
+  // São Vicente
   {
     id: 'sao-vicente',
     nome: 'São Vicente',
@@ -59,7 +63,7 @@ export const cidades: Cidade[] = [
         id: 'saovicente-porchat',
         nome: 'Ilha Porchat',
         categoria: 'Praia e Mirante',
-        imagem: PLACEHOLDER,
+        imagem: IMAGENS_ATRACOES['saovicente-porchat'],
         endereco: endereco('Av. Presidente Kennedy', 'S/N', 'Ilha Porchat', 'São Vicente'),
         horarios: 'Acesso livre, 24 horas',
         historia:
@@ -69,7 +73,7 @@ export const cidades: Cidade[] = [
         id: 'saovicente-centro-historico',
         nome: 'Centro Histórico de São Vicente',
         categoria: 'Patrimônio Histórico',
-        imagem: PLACEHOLDER,
+        imagem: IMAGENS_ATRACOES['saovicente-centro-historico'],
         endereco: endereco('Praça Barão do Rio Branco', 'S/N', 'Centro', 'São Vicente'),
         horarios: 'Acesso livre durante o dia',
         historia:
@@ -79,7 +83,7 @@ export const cidades: Cidade[] = [
         id: 'saovicente-gonzaguinha',
         nome: 'Praia do Gonzaguinha',
         categoria: 'Praia',
-        imagem: PLACEHOLDER,
+        imagem: IMAGENS_ATRACOES['saovicente-gonzaguinha'],
         endereco: endereco('Av. Presidente Wilson', 'S/N', 'Gonzaguinha', 'São Vicente'),
         horarios: 'Aberta 24 horas',
         historia:
@@ -87,6 +91,8 @@ export const cidades: Cidade[] = [
       },
     ],
   },
+
+  // Peruíbe
   {
     id: 'peruibe',
     nome: 'Peruíbe',
@@ -97,7 +103,7 @@ export const cidades: Cidade[] = [
         id: 'peruibe-guarau',
         nome: 'Praia do Guaraú',
         categoria: 'Natureza e Praia',
-        imagem: PLACEHOLDER,
+        imagem: IMAGENS_ATRACOES['peruibe-guarau'],
         endereco: endereco('Estrada do Guaraú', 'S/N', 'Guaraú', 'Peruíbe'),
         horarios: 'Aberta 24 horas (estacionamentos com horário comercial)',
         historia:
@@ -107,7 +113,7 @@ export const cidades: Cidade[] = [
         id: 'peruibe-abarebebe',
         nome: 'Ruínas do Abarebebê',
         categoria: 'Patrimônio Histórico',
-        imagem: PLACEHOLDER,
+        imagem: IMAGENS_ATRACOES['peruibe-abarebebe'],
         endereco: endereco('Av. Beira-Mar', 'S/N', 'Abarebebê', 'Peruíbe'),
         horarios: 'Acesso livre',
         historia:
@@ -117,7 +123,7 @@ export const cidades: Cidade[] = [
         id: 'peruibe-jureia',
         nome: 'Reserva Ecológica da Juréia-Itatins',
         categoria: 'Ecoturismo',
-        imagem: PLACEHOLDER,
+        imagem: IMAGENS_ATRACOES['peruibe-jureia'],
         endereco: endereco('Rodovia Pe. Manoel da Nóbrega', 'S/N', 'Centro', 'Peruíbe'),
         horarios: 'Terça a domingo, 8h às 17h (consultar agendamento)',
         historia:
@@ -125,6 +131,8 @@ export const cidades: Cidade[] = [
       },
     ],
   },
+
+  // Praia Grande
   {
     id: 'praia-grande',
     nome: 'Praia Grande',
@@ -132,37 +140,40 @@ export const cidades: Cidade[] = [
     imagem: require('../assets/cidades/praia-grande.png'),
     atracoes: [
       {
-        id: 'pgrande-orla',
-        nome: 'Orla da Praia Grande',
-        categoria: 'Orla e Lazer',
-        imagem: PLACEHOLDER,
-        endereco: endereco('Av. Presidente Kennedy', 'S/N', 'Vila Caiçara', 'Praia Grande'),
-        horarios: 'Aberta 24 horas',
+        id: 'pgrande-disney',
+        nome: 'Loja Oficial Disney (Litoral Plaza)',
+        categoria: 'Compras e Lazer',
+        imagem: IMAGENS_ATRACOES['pgrande-disney'],
+        endereco: endereco('Av. Ayrton Senna da Silva', '1511', 'Xixová', 'Praia Grande'),
+        horarios: 'Segunda a sábado das 10h às 22h; domingos e feriados das 12h às 21h',
         historia:
-          'Extensa faixa de areia com quiosques e espaços de lazer, muito procurada por famílias e esportistas.',
+          'Localizada no Litoral Plaza Shopping, é a primeira loja licenciada da Disney na Baixada Santista, reunindo produtos oficiais de personagens clássicos, Marvel, Star Wars e Pixar em um espaço temático.',
       },
       {
-        id: 'pgrande-boqueirao',
-        nome: 'Praia do Boqueirão',
-        categoria: 'Praia',
-        imagem: PLACEHOLDER,
-        endereco: endereco('Av. Presidente Kennedy', 'S/N', 'Boqueirão', 'Praia Grande'),
-        horarios: 'Aberta 24 horas',
+        id: 'pgrande-portinho',
+        nome: "Portinho - Área de Lazer Ézio Dall'Acqua",
+        categoria: 'Cultura e Natureza',
+        imagem: IMAGENS_ATRACOES['pgrande-portinho'],
+        endereco: endereco('Rua Paulo Sérgio Garcia', 'S/N', 'Sítio do Campo', 'Praia Grande'),
+        horarios: 'Todos os dias, das 7h às 18h',
         historia:
-          'Trecho da orla com ondas adequadas para iniciantes e uma tradicional vida de bairro à beira-mar.',
+          'Localizado às margens do Mar Pequeno, o Portinho é uma ampla área de lazer ecológica em Praia Grande com quiosques, playgrounds, quadras esportivas, píer para pesca e aluguel de barcos, cercado por manguezais preservados.',
       },
+
       {
-        id: 'pgrande-ciclovia',
-        nome: 'Ciclovia da Orla',
-        categoria: 'Esporte e Lazer',
-        imagem: PLACEHOLDER,
-        endereco: endereco('Av. Presidente Kennedy', 'S/N', 'Tupi', 'Praia Grande'),
-        horarios: 'Diariamente, o dia todo',
+        id: 'pgrande-serra-mar',
+        nome: 'Parque Estadual Serra do Mar',
+        categoria: 'Cultura e Natureza', // ajuste conforme as categorias definidas no seu tipo
+        imagem: IMAGENS_ATRACOES['pgrande-serra-mar'],
+        endereco: endereco('Estrada do Rio Branco', 'S/N', 'Melvi', 'Praia Grande'),
+        horarios: 'Terça a domingo, das 8h às 17h (visitas mediante agendamento)',
         historia:
-          'Percurso plano e contínuo, ideal para caminhadas, corridas e passeios de bicicleta com vista para o mar.',
+          'Maior corredor biológico da Mata Atlântica no Brasil, o parque preserva encostas, nascentes e trilhas ecológicas em Praia Grande, oferecendo contato direto com a biodiversidade nativa e mirantes naturais da região.',
       },
     ],
   },
+
+  // Mongaguá
   {
     id: 'mongagua',
     nome: 'Mongaguá',
@@ -173,34 +184,36 @@ export const cidades: Cidade[] = [
         id: 'mongagua-praia-central',
         nome: 'Praia Central de Mongaguá',
         categoria: 'Praia',
-        imagem: PLACEHOLDER,
+        imagem: IMAGENS_ATRACOES['mongagua-praia-mongagua'],
         endereco: endereco('Av. Presidente Kennedy', 'S/N', 'Centro', 'Mongaguá'),
         horarios: 'Aberta 24 horas',
         historia:
           'Praia tranquila de águas calmas, tradicionalmente frequentada por famílias e pescadores artesanais.',
       },
       {
-        id: 'mongagua-itaguacu',
-        nome: 'Praia de Itaguaçu',
-        categoria: 'Natureza e Praia',
-        imagem: PLACEHOLDER,
-        endereco: endereco('Av. Beira-Mar', 'S/N', 'Itaguaçu', 'Mongaguá'),
-        horarios: 'Aberta 24 horas',
+        id: 'mongagua-monumento-sao-pedro',
+        nome: 'Monumento São Pedro',
+        categoria: 'História e Patrimônio', // ajuste conforme as categorias definidas no seu projeto
+        imagem: IMAGENS_ATRACOES['mongagua-monumento-sao-pedro'],
+        endereco: endereco('Av. Governador Mário Covas Júnior', 'S/N', 'Centro', 'Mongaguá'),
+        horarios: 'Acesso livre 24 horas',
         historia:
-          'Trecho mais reservado da costa, cercado por vegetação nativa e ideal para um dia mais silencioso.',
+          'Localizado na orla de Mongaguá, o monumento homenageia São Pedro, padroeiro dos pescadores, simbolizando a forte tradição pesqueira, a fé da comunidade caiçara e a identidade cultural do município.',
       },
       {
         id: 'mongagua-trilhas',
-        nome: 'Trilhas da Mata Atlântica',
-        categoria: 'Ecoturismo',
-        imagem: PLACEHOLDER,
-        endereco: endereco('Estrada da Mata', 'S/N', 'Jardim Central', 'Mongaguá'),
-        horarios: 'Diariamente, durante o dia (recomendado com guia)',
+        nome: 'Plataforma de Pesca de Mongaguá',
+        categoria: 'Lazer e Pesca',
+        imagem: IMAGENS_ATRACOES['mongagua-trilhas'],
+        endereco: endereco('Av. Governador Mário Covas Júnior', 'S/N', 'Agenor de Campos', 'Mongaguá'),
+        horarios: 'Todos os dias, 24 horas',
         historia:
-          'Caminhadas por áreas remanescentes de Mata Atlântica, com boa observação de aves e fauna local.',
+          'Uma das maiores plataformas de pesca em concreto armado da América Latina, avançando 400 metros mar adentro e oferecendo vista panorâmica da orla.',
       },
     ],
   },
+
+  // Itanhaém
   {
     id: 'itanhaem',
     nome: 'Itanhaém',
@@ -211,7 +224,7 @@ export const cidades: Cidade[] = [
         id: 'itanhaem-matriz',
         nome: 'Igreja Matriz de Nossa Senhora da Conceição',
         categoria: 'Patrimônio Histórico',
-        imagem: PLACEHOLDER,
+        imagem: IMAGENS_ATRACOES['itanhaem-matriz'],
         endereco: endereco('Praça Narciso de Andrade', 'S/N', 'Centro', 'Itanhaém'),
         horarios: 'Visitação diurna (confirmar horários de missa)',
         historia:
@@ -221,7 +234,7 @@ export const cidades: Cidade[] = [
         id: 'itanhaem-sonho',
         nome: 'Praia do Sonho',
         categoria: 'Praia',
-        imagem: PLACEHOLDER,
+        imagem: IMAGENS_ATRACOES['itanhaem-sonho'],
         endereco: endereco('Av. Beira-Mar', 'S/N', 'Sonho', 'Itanhaém'),
         horarios: 'Aberta 24 horas',
         historia:
@@ -231,14 +244,18 @@ export const cidades: Cidade[] = [
         id: 'itanhaem-rio',
         nome: 'Passeio pelo Rio Itanhaém',
         categoria: 'Passeio e Pesca',
-        imagem: PLACEHOLDER,
+        imagem: IMAGENS_ATRACOES['itanhaem-rio'],
         endereco: endereco('Av. Marginal', 'S/N', 'Centro', 'Itanhaém'),
         horarios: 'Diariamente, conforme disponibilidade dos barqueiros',
         historia:
           'Passeios de barco pelo rio que corta a cidade, uma forma tradicional de conhecer a vida ribeirinha.',
       },
+
+
     ],
   },
+
+  // Guarujá
   {
     id: 'guaruja',
     nome: 'Guarujá',
@@ -249,7 +266,7 @@ export const cidades: Cidade[] = [
         id: 'guaruja-enseada',
         nome: 'Praia da Enseada',
         categoria: 'Praia e Gastronomia',
-        imagem: PLACEHOLDER,
+        imagem: IMAGENS_ATRACOES['guaruja-enseada'],
         endereco: endereco('Av. Dom Pedro I', 'S/N', 'Enseada', 'Guarujá'),
         horarios: 'Aberta 24 horas',
         historia:
@@ -259,24 +276,26 @@ export const cidades: Cidade[] = [
         id: 'guaruja-forte-andradas',
         nome: 'Forte dos Andradas',
         categoria: 'Patrimônio Histórico',
-        imagem: PLACEHOLDER,
+        imagem: IMAGENS_ATRACOES['guaruja-forte-andradas'],
         endereco: endereco('Rua do Forte', 'S/N', 'Morrinhos', 'Guarujá'),
         horarios: 'Visitação diurna (confirmar)',
         historia:
           'Fortificação histórica erguida para defender o acesso ao canal de Santos durante o período colonial.',
       },
       {
-        id: 'guaruja-pitangueiras',
-        nome: 'Praia das Pitangueiras',
-        categoria: 'Praia',
-        imagem: PLACEHOLDER,
-        endereco: endereco('Av. Miguel Stéfano', 'S/N', 'Pitangueiras', 'Guarujá'),
-        horarios: 'Aberta 24 horas',
+        id: 'guaruja-fortaleza-santo-amaro',
+        nome: 'Fortaleza de Santo Amaro da Barra Grande',
+        categoria: 'História e Patrimônio', // ajuste conforme as categorias definidas no seu projeto
+        imagem: IMAGENS_ATRACOES['guaruja-fortaleza-santo-amaro'],
+        endereco: endereco('Rua Messias Borges', '380', 'Santa Cruz dos Navegantes', 'Guarujá'),
+        horarios: 'Terça a domingo, das 9h às 17h',
         historia:
-          'Praia central e movimentada, conhecida pelo agito de bares, restaurantes e comércio local.',
+          'Construída no século XVI durante o período da União Ibérica para defender o canal de acesso ao Porto de Santos, a fortaleza preserva muralhas de pedra, canhões históricos, capela e vista privilegiada para a baía.',
       },
     ],
   },
+
+  // Cubatão
   {
     id: 'cubatao',
     nome: 'Cubatão',
@@ -287,7 +306,7 @@ export const cidades: Cidade[] = [
         id: 'cubatao-caminho-do-mar',
         nome: 'Caminho do Mar',
         categoria: 'Natureza e História',
-        imagem: PLACEHOLDER,
+        imagem: IMAGENS_ATRACOES['cubatao-caminho-do-mar'],
         endereco: endereco('Estrada Caminho do Mar', 'S/N', 'Alto da Serra', 'Cubatão'),
         horarios: 'Diariamente, sujeito a restrições em dias de chuva',
         historia:
@@ -297,7 +316,7 @@ export const cidades: Cidade[] = [
         id: 'cubatao-usina-henry-borden',
         nome: 'Usina Henry Borden',
         categoria: 'Patrimônio Industrial',
-        imagem: PLACEHOLDER,
+        imagem: IMAGENS_ATRACOES['cubatao-usina-henry-borden'],
         endereco: endereco('Rua Henry Borden', 'S/N', 'Centro', 'Cubatão'),
         horarios: 'Visitação mediante agendamento (confirmar)',
         historia:
@@ -307,7 +326,7 @@ export const cidades: Cidade[] = [
         id: 'cubatao-parque-serra',
         nome: 'Parque Estadual Serra do Mar',
         categoria: 'Ecoturismo',
-        imagem: PLACEHOLDER,
+        imagem: IMAGENS_ATRACOES['cubatao-parque-serra'],
         endereco: endereco('Estrada do Caminho do Mar', 'S/N', 'Alto da Serra', 'Cubatão'),
         horarios: 'Terça a domingo, 8h às 17h (confirmar)',
         historia:
@@ -315,6 +334,8 @@ export const cidades: Cidade[] = [
       },
     ],
   },
+
+  // Bertioga
   {
     id: 'bertioga',
     nome: 'Bertioga',
@@ -325,7 +346,7 @@ export const cidades: Cidade[] = [
         id: 'bertioga-forte-sao-joao',
         nome: 'Fortaleza de São João',
         categoria: 'Patrimônio Histórico',
-        imagem: PLACEHOLDER,
+        imagem: IMAGENS_ATRACOES['bertioga-forte-sao-joao'],
         endereco: endereco('Rua Forte São João', 'S/N', 'Centro', 'Bertioga'),
         horarios: 'Terça a domingo, 9h às 17h (confirmar)',
         historia:
@@ -335,21 +356,21 @@ export const cidades: Cidade[] = [
         id: 'bertioga-boraceia',
         nome: 'Praia de Boraceia',
         categoria: 'Praia',
-        imagem: PLACEHOLDER,
+        imagem: IMAGENS_ATRACOES['bertioga-boraceia'],
         endereco: endereco('Estrada de Boraceia', 'S/N', 'Boraceia', 'Bertioga'),
         horarios: 'Aberta 24 horas',
         historia:
           'Praia de faixa extensa e pouco urbanizada, cercada pela Mata Atlântica e ideal para dias de tranquilidade.',
       },
       {
-        id: 'bertioga-canal',
-        nome: 'Passeio pelo Canal de Bertioga',
-        categoria: 'Passeio de Barco',
-        imagem: PLACEHOLDER,
-        endereco: endereco('Canal de Bertioga', 'S/N', 'Centro', 'Bertioga'),
-        horarios: 'Diariamente, conforme o movimento de embarcações',
+        id: 'bertioga-sesc',
+        nome: 'Sesc Bertioga',
+        categoria: 'Cultura e Lazer', // ajuste conforme as categorias definidas no seu projeto
+        imagem: IMAGENS_ATRACOES['bertioga-sesc'],
+        endereco: endereco('Rua Pastor Djalma da Silva Coimbra', '20', 'Jardim Rio da Praia', 'Bertioga'),
+        horarios: 'Terça a domingo, das 8h às 18h (programação cultural conforme agenda)',
         historia:
-          'Passeios de barco pelo canal que separa a cidade de Guarujá, com vista para manguezais e ilhas.',
+          'Referência nacional em lazer, turismo social e educação ambiental no litoral paulista, o Sesc Bertioga conta com ampla área verde preservada, trilhas ecológicas, espaços culturais, esportivos e programação aberta ao público.',
       },
     ],
   },
