@@ -64,13 +64,45 @@ export default function AtracaoDetalheScreen() {
 }
 
 const styles = StyleSheet.create({
-  container: { flex: 1, backgroundColor: COLORS.areia },
-  conteudo: { paddingBottom: 40 },
-  vazio: { flex: 1, alignItems: 'center', justifyContent: 'center' },
-  imagem: { width: '100%', height: 240 },
-  corpo: { padding: 20 },
-  linhaTopo: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' },
-  badge: { backgroundColor: '#E8F4FB', paddingHorizontal: 12, paddingVertical: 6, borderRadius: 20 },
-  badgeTexto: { color: COLORS.azulMarinho, fontWeight: '700', fontSize: 12 },
-  nome: { fontSize: 24, fontWeight: '800', color: COLORS.texto, marginVertical: 12 },
+  container: {
+    flex: 1,
+    backgroundColor: COLORS.areia,
+  },
+  conteudo: {
+    paddingBottom: 40,
+  },
+  vazio: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  imagem: {
+    width: '100%',
+    height: 240,
+  },
+  corpo: {
+    padding: 20,
+  },
+  linhaTopo: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+  },
+  badge: {
+    backgroundColor: '#E8F4FB',
+    paddingHorizontal: 12,
+    paddingVertical: 6,
+    borderRadius: 20,
+  },
+  badgeTexto: {
+    color: COLORS.azulMarinho,
+    fontWeight: '700',
+    fontSize: 12,
+  },
+  nome: {
+    fontSize: 24,
+    fontWeight: '800',
+    color: COLORS.texto,
+    marginVertical: 12,
+  },
 });

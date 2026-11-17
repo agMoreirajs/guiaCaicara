@@ -184,7 +184,7 @@ export const cidades: Cidade[] = [
         id: 'mongagua-praia-central',
         nome: 'Praia Central de Mongaguá',
         categoria: 'Praia',
-        imagem: IMAGENS_ATRACOES['mongagua-praia-mongagua'],
+        imagem: IMAGENS_ATRACOES['mongagua-praia-central'],
         endereco: endereco('Av. Presidente Kennedy', 'S/N', 'Centro', 'Mongaguá'),
         horarios: 'Aberta 24 horas',
         historia:

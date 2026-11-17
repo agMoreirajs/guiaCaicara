@@ -99,8 +99,13 @@ function Secao({ titulo, children }: { titulo: string; children: React.ReactNode
 }
 
 const styles = StyleSheet.create({
-  container: { flex: 1, backgroundColor: COLORS.areia },
-  conteudo: { paddingBottom: 40 },
+  container: {
+    flex: 1,
+    backgroundColor: COLORS.areia,
+  },
+  conteudo: {
+    paddingBottom: 40,
+  },
   header: {
     alignItems: 'center',
     backgroundColor: COLORS.azulMarinho,
@@ -109,9 +114,24 @@ const styles = StyleSheet.create({
     borderBottomRightRadius: 28,
     marginBottom: 20,
   },
-  avatar: { width: 96, height: 96, borderRadius: 48, borderWidth: 3, borderColor: COLORS.amarelo },
-  nome: { marginTop: 12, fontSize: 20, fontWeight: '800', color: COLORS.branco },
-  subtitulo: { fontSize: 13, color: '#BFE3F7', marginTop: 2 },
+  avatar: {
+    width: 96,
+    height: 96,
+    borderRadius: 48,
+    borderWidth: 3,
+    borderColor: COLORS.amarelo,
+  },
+  nome: {
+    marginTop: 12,
+    fontSize: 20,
+    fontWeight: '800',
+    color: COLORS.branco,
+  },
+  subtitulo: {
+    fontSize: 13,
+    color: '#BFE3F7',
+    marginTop: 2,
+  },
   estatisticas: {
     flexDirection: 'row',
     marginTop: 18,
@@ -123,11 +143,29 @@ const styles = StyleSheet.create({
     justifyContent: 'space-around',
     alignItems: 'center',
   },
-  estatistica: { alignItems: 'center', flex: 1 },
-  estatisticaValor: { fontSize: 20, fontWeight: '800', color: COLORS.amarelo },
-  estatisticaRotulo: { fontSize: 12, color: COLORS.branco, marginTop: 2 },
-  divisor: { width: 1, height: 36, backgroundColor: 'rgba(255,255,255,0.3)' },
-  secao: { paddingHorizontal: 20, marginBottom: 8 },
+  estatistica: {
+    alignItems: 'center',
+    flex: 1,
+  },
+  estatisticaValor: {
+    fontSize: 20,
+    fontWeight: '800',
+    color: COLORS.amarelo,
+  },
+  estatisticaRotulo: {
+    fontSize: 12,
+    color: COLORS.branco,
+    marginTop: 2,
+  },
+  divisor: {
+    width: 1,
+    height: 36,
+    backgroundColor: 'rgba(255,255,255,0.3)',
+  },
+  secao: {
+    paddingHorizontal: 20,
+    marginBottom: 8,
+  },
   secaoTitulo: {
     fontSize: 12,
     fontWeight: '700',

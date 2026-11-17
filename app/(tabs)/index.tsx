@@ -62,8 +62,15 @@ export default function ExploraScreen() {
 }
 
 const styles = StyleSheet.create({
-  container: { flex: 1, backgroundColor: COLORS.areia },
-  conteudo: { paddingBottom: 30 },
+  container: {
+    flex: 1,
+    backgroundColor: COLORS.areia
+  },
+
+  conteudo: {
+    paddingBottom: 30
+  },
+
   secao: {
     fontSize: 18,
     fontWeight: '800',

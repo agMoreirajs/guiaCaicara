@@ -46,6 +46,13 @@ export default function FavoritosScreen() {
 }
 
 const styles = StyleSheet.create({
-  container: { flex: 1, backgroundColor: COLORS.areia },
-  conteudo: { paddingTop: 10, paddingBottom: 30, flexGrow: 1 },
+  container: {
+    flex: 1,
+    backgroundColor: COLORS.areia
+  },
+  conteudo: {
+    paddingTop: 10,
+    paddingBottom: 30,
+    flexGrow: 1
+  },
 });

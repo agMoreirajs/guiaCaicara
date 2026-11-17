@@ -24,7 +24,7 @@ export const IMAGENS_ATRACOES: Record<string, ImageSourcePropType> = {
 
 
   // Mongaguá
-  'mongagua-praia-mongagua': require('./mongagua/praia-mongagua.jpg'),
+  'mongagua-praia-central': require('./mongagua/praia-mongagua.jpg'),
   'mongagua-monumento-sao-pedro': require('./mongagua/monumento sao pedro.jpg'),
   'mongagua-trilhas': require('./mongagua/pier.jpg'),
 
@@ -36,7 +36,7 @@ export const IMAGENS_ATRACOES: Record<string, ImageSourcePropType> = {
   // Guarujá
   'guaruja-enseada': require('./guaruja/praiaEnseada.webp'),
   'guaruja-forte-andradas': require('./guaruja/ForteAndradas.webp'),
-'guaruja-fortaleza-santo-amaro': require('./guaruja/museuFortalezaSantoAmaro.webp'), // mantenha o nome e extensão exatos do arquivo na sua pasta
+  'guaruja-fortaleza-santo-amaro': require('./guaruja/museuFortalezaSantoAmaro.webp'), // mantenha o nome e extensão exatos do arquivo na sua pasta
 
   // Cubatão
   'cubatao-caminho-do-mar': require('./cubatao/parqueCaminhoMar.jpg'),
