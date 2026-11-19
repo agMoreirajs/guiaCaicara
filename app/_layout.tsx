@@ -1,13 +1,13 @@
 import { Stack } from 'expo-router';
 import { StatusBar } from 'expo-status-bar';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
-import { FavoritesProvider } from '@/src/context/FavoritesContext';
+import { AuthProvider } from '@/src/context/AuthContext';
 import { COLORS } from '@/src/theme/colors';
 
 export default function RootLayout() {
   return (
     <SafeAreaProvider>
-      <FavoritesProvider>
+      <AuthProvider>
         <StatusBar style="dark" />
         <Stack
           screenOptions={{
@@ -17,11 +17,12 @@ export default function RootLayout() {
           }}
         >
           <Stack.Screen name="index" options={{ headerShown: false }} />
+          <Stack.Screen name="cadastro" options={{ headerShown: false }} />
           <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
           <Stack.Screen name="cidade/[id]" options={{ title: 'Cidade' }} />
           <Stack.Screen name="atracao/[id]" options={{ title: 'Atração' }} />
         </Stack>
-      </FavoritesProvider>
+      </AuthProvider>
     </SafeAreaProvider>
   );
 }

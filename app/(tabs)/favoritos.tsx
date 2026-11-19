@@ -5,12 +5,12 @@ import { router } from 'expo-router';
 import AppHeader from '@/src/components/AppHeader';
 import AttractionCard from '@/src/components/AttractionCard';
 import EmptyState from '@/src/components/EmptyState';
-import { useFavorites } from '@/src/context/FavoritesContext';
 import { getAtracaoById } from '@/src/database/database';
 import { COLORS } from '@/src/theme/colors';
+import { useAuth } from '@/src/context/AuthContext';
 
 export default function FavoritosScreen() {
-  const { favoritos } = useFavorites();
+  const { favoritos } = useAuth();
 
   const lista = useMemo(
     () => favoritos.map((id) => getAtracaoById(id)).filter((a) => a !== undefined),
