@@ -40,8 +40,12 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 const sair = () => {
     setUsuario(null);
     setFavoritos([]);
-    router.replace('/');
+    if (router.canDismiss()) {
+      router.dismissAll();
+    }
+    router.navigate('/');
   };
+
 
   const isFavorito = (atracaoId: string) => favoritos.includes(atracaoId);
 

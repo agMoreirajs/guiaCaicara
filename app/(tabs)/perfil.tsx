@@ -132,14 +132,20 @@ export default function PerfilScreen() {
           />
         </Secao>
 
-        <Secao titulo="Conta">
+     
+          <Secao titulo="Conta">
           <SettingsRow
             icon="log-out-outline"
             label="Sair do aplicativo"
             danger
-            onPress={sair}
+            onPress={() => {
+              sair();
+              router.back();
+            }}
           />
         </Secao>
+         
+       
       </ScrollView>
 
       <Modal

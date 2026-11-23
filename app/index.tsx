@@ -37,7 +37,7 @@ const handleLogin = async () => {
     setCarregando(true);
     const dadosUsuario = await fazerLogin(usuario.trim(), senha);
     await entrar(dadosUsuario);
-    router.replace('/(tabs)');
+    router.push('/(tabs)');
   } catch (erro: any) {
     Alert.alert('Erro ao entrar', erro.message || 'Não foi possível fazer login.');
   } finally {
