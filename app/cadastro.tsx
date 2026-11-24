@@ -20,12 +20,13 @@ export default function CadastroScreen() {
   const router = useRouter();
   const [nome, setNome] = useState('');
   const [usuario, setUsuario] = useState('');
+  const [email, setEmail] = useState('');
   const [senha, setSenha] = useState('');
   const [confirmarSenha, setConfirmarSenha] = useState('');
   const [carregando, setCarregando] = useState(false);
 
   const handleCadastro = async () => {
-    if (!nome.trim() || !usuario.trim() || !senha.trim()) {
+    if (!nome.trim() || !usuario.trim() || !email.trim() || !senha.trim()) {
       Alert.alert('Atenção', 'Preencha todos os campos.');
       return;
     }
@@ -37,7 +38,7 @@ export default function CadastroScreen() {
 
     try {
       setCarregando(true);
-      await cadastrarUsuario(nome.trim(), usuario.trim(), senha);
+      await cadastrarUsuario(nome.trim(), usuario.trim(),email.trim(), senha );
       Alert.alert('Conta criada!', 'Agora faça login com seu usuário e senha.', [
         { text: 'Ir para o login', onPress: () => router.back() },
       ]);
@@ -81,6 +82,19 @@ export default function CadastroScreen() {
               autoCapitalize="none"
               value={usuario}
               onChangeText={setUsuario}
+            />
+          </View>
+
+          <View style={styles.inputBox}>
+            <Ionicons name="mail-outline" size={20} color={COLORS.azulMarinho} />
+            <TextInput
+              style={styles.input}
+              placeholder="E-mail"
+              placeholderTextColor="#8A94A6"
+              keyboardType="email-address"
+              autoCapitalize="none"
+              value={email}
+              onChangeText={setEmail}
             />
           </View>
 
