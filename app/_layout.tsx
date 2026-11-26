@@ -16,7 +16,7 @@ export default function RootLayout() {
             contentStyle: { backgroundColor: COLORS.areia },
           }}
         >
-          <Stack.Screen name="index" options={{ headerShown: false }} />
+          <Stack.Screen name="login" options={{ headerShown: false }} />
           <Stack.Screen name="cadastro" options={{ headerShown: false }} />
           <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
           <Stack.Screen name="cidade/[id]" options={{ title: 'Cidade' }} />
@@ -26,3 +26,4 @@ export default function RootLayout() {
     </SafeAreaProvider>
   );
 }
+

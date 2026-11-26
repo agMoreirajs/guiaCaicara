@@ -38,14 +38,10 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   };
 
 const sair = () => {
-    setUsuario(null);
-    setFavoritos([]);
-    if (router.canDismiss()) {
-      router.dismissAll();
-    }
-    router.navigate('/');
-  };
-
+  setUsuario(null);
+  setFavoritos([]);
+  router.replace('/login');
+};
 
   const isFavorito = (atracaoId: string) => favoritos.includes(atracaoId);
 

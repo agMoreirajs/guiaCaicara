@@ -79,7 +79,7 @@ export default function LoginScreen() {
         });
       }
 
-      router.replace('/(tabs)');
+         router.navigate('/(tabs)');
     } catch (erro: any) {
       Alert.alert('Erro ao entrar', erro?.message || 'Não foi possível fazer login.');
     } finally {

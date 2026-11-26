@@ -34,7 +34,17 @@ export async function fazerLogin(usuario: string, senha: string): Promise<DadosU
     throw new Error(dados.erro || 'Não foi possível fazer login.');
   }
 
-  return dados;
+  const usuarioRetornado = dados?.usuario ?? dados;
+  const idConvertido = Number(usuarioRetornado?.id);
+
+  if (!idConvertido || Number.isNaN(idConvertido)) {
+    throw new Error('O login não retornou um ID de usuário válido.');
+  }
+
+  return {
+    ...usuarioRetornado,
+    id: idConvertido,
+  };
 }
 
 export async function cadastrarUsuario(
@@ -66,14 +76,45 @@ export async function listarFavoritos(usuarioId: number): Promise<string[]> {
     throw new Error(dados.erro || 'Não foi possível carregar os favoritos.');
   }
 
-  return Array.isArray(dados) ? dados.map(String) : Array.isArray(dados?.favoritos) ? dados.favoritos.map(String) : [];
+  return Array.isArray(dados)
+    ? dados.map(String)
+    : Array.isArray(dados?.favoritos)
+      ? dados.favoritos.map(String)
+      : [];
+}
+
+export async function alternarFavorito(
+  usuarioId: number,
+  atracaoId: string
+): Promise<{ sucesso: boolean; favoritado: boolean }> {
+  const resposta = await fetch(`${API_BASE_URL}/favoritos.php`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      usuario_id: usuarioId,
+      atracao_id: atracaoId,
+      acao: 'toggle',
+    }),
+  });
+
+  const dados = await lerRespostaJson(resposta);
+
+  if (!resposta.ok) {
+    throw new Error(dados.erro || 'Não foi possível atualizar o favorito.');
+  }
+
+  return dados;
 }
 
 export async function adicionarFavorito(usuarioId: number, atracaoId: string): Promise<void> {
-  const resposta = await fetch(`${API_BASE_URL}/adicionar_favorito.php`, {
+  const resposta = await fetch(`${API_BASE_URL}/favoritos.php`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ usuario_id: usuarioId, atracao_id: atracaoId }),
+    body: JSON.stringify({
+      usuario_id: usuarioId,
+      atracao_id: atracaoId,
+      acao: 'adicionar',
+    }),
   });
 
   const dados = await lerRespostaJson(resposta);
@@ -83,10 +124,14 @@ export async function adicionarFavorito(usuarioId: number, atracaoId: string): P
 }
 
 export async function removerFavorito(usuarioId: number, atracaoId: string): Promise<void> {
-  const resposta = await fetch(`${API_BASE_URL}/remover_favorito.php`, {
+  const resposta = await fetch(`${API_BASE_URL}/favoritos.php`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ usuario_id: usuarioId, atracao_id: atracaoId }),
+    body: JSON.stringify({
+      usuario_id: usuarioId,
+      atracao_id: atracaoId,
+      acao: 'remover',
+    }),
   });
 
   const dados = await lerRespostaJson(resposta);
